@@ -6,8 +6,8 @@ import numpy as np
 
 def get_pronunciations(pronunciation_filename='csu-dict-6d.txt',
                        phonemes_filename='phonemes.txt',
-                       remove_apostrophe_esses = True,
-                       remove_period_words = True,
+                       remove_apostrophe_esses=True,
+                       remove_period_words=True,
                        tosort=True):
 
     with open(pronunciation_filename, 'r+') as f:
