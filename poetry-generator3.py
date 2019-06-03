@@ -319,7 +319,9 @@ def generate(dictionary,
 
     return output
 
-generate(dictionary[:30000],
+poem = generate(dictionary[:30000],
          [stresses, nostresses]*4,
          get_pronunciation_end('traitor', dictionary)[0],
          5)
+
+print ('\n'.join(map(lambda x: ' '.join(x), poem)))
