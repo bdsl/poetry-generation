@@ -1,10 +1,16 @@
 from wordfreq import word_frequency
 from random import sample
+import random
 import time
 import re
 from itertools import product
 import numpy as np
 
+if (len(sys.argv) >= 3):
+    seed = sys.argv[2]
+else:
+    seed = random.randrange(100000)
+random.seed(int(seed))
 
 def get_raw_dictionary(pronunciation_filename='csu-dict-6d.txt'):
 
@@ -323,3 +329,4 @@ generate(dictionary[:30000],
          [stresses, nostresses]*4,
          get_pronunciation_end('traitor', dictionary)[0],
          5)
+print(f'To see the same poem again, run {sys.argv[0]} {sys.argv[1]} {seed}')
